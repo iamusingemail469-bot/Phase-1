@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+  background: #050505;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.logo{
+  font-family: "Cinzel", serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #FFD700;
+}
+
+.logo span{
+  color: white;
+}
+
+.nav-links{
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover{
+  color: #FFD700;
+}
+
+/* Mobile Menu Button */
+.menu-btn{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-btn span{
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 10px;
+}
+
+/* Hero */
+.hero{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  background: radial-gradient(circle at top, rgba(255,215,0,0.08), transparent 60%),
+              linear-gradient(to bottom, #000, #050505);
+}
+
+.hero-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.hero-content{
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-title{
+  font-family: "Cinzel", serif;
+  font-size: 55px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 4px;
+  text-shadow: 0px 0px 20px rgba(255,215,0,0.3);
+}
+
+.hero-subtitle{
+  margin-top: 15px;
+  font-size: 16px;
+  opacity: 0.85;
+  letter-spacing: 1px;
+}
+
+.hero-btn{
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  background: #FFD700;
+  color: black;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover{
+  background: white;
+  transform: scale(1.05);
+}
+
+/* Sections */
+section{
+  padding: 90px 40px;
+}
+
+.section-title{
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 40px;
+  letter-spacing: 4px;
+  color: white;
+}
+
+.section-subtitle{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+  letter-spacing: 2px;
+}
+
+.divider{
+  margin: 20px auto;
+  width: 250px;
+  height: 1px;
+  background: rgba(255, 215, 0, 0.4);
+}
+
+/* About */
+.about-content{
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-text{
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+.gold{
+  color: #FFD700;
+  font-weight: 600;
+}
+
+.social-box{
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-btn{
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.social-btn:hover{
+  transform: scale(1.05);
+}
+
+/* Social Colors */
+.yt{
+  background: #ff0000;
+  color: white;
+}
+
+.insta{
+  background: linear-gradient(45deg, #ff00ff, #ff6600);
+  color: white;
+}
+
+/* Projects */
+.project-list{
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-card{
+  padding: 28px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover{
+  transform: translateY(-5px);
+  border: 1px solid rgba(255,215,0,0.3);
+}
+
+.project-card h3{
+  font-family: "Cinzel", serif;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.project-card p{
+  font-size: 14px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+/* Theme Colors like your poster */
+.green h3{
+  color: #00ff99;
+  text-shadow: 0px 0px 18px rgba(0,255,153,0.4);
+}
+
+.blue h3{
+  color: #66aaff;
+  text-shadow: 0px 0px 18px rgba(102,170,255,0.4);
+}
+
+.white h3{
+  color: #ffffff;
+  text-shadow: 0px 0px 18px rgba(255,255,255,0.25);
+}
+
+.red h3{
+  color: #ff6666;
+  text-shadow: 0px 0px 18px rgba(255,102,102,0.4);
+}
+
+.purple h3{
+  color: #b599ff;
+  text-shadow: 0px 0px 18px rgba(181,153,255,0.4);
+}
+
+/* Footer */
+.footer{
+  text-align: center;
+  padding: 35px 15px;
+  background: #000;
+  border-top: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.footer p{
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.footer-small{
+  margin-top: 5px;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+/* Mobile Responsive */
+@media(max-width: 768px){
+
+  .navbar{
+    padding: 16px 20px;
+  }
+
+  .nav-links{
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: rgba(0,0,0,0.95);
+    border: 1px solid rgba(255,215,0,0.2);
+    border-radius: 12px;
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+    display: none;
+    width: 200px;
+  }
+
+  .nav-links.active{
+    display: flex;
+  }
+
+  .menu-btn{
+    display: flex;
+  }
+
+  .hero-title{
+    font-size: 36px;
+  }
+
+  .section-title{
+    font-size: 30px;
+  }
+
+  section{
+    padding: 80px 20px;
+  }
+
+  .divider{
+    width: 180px;
+  }
+
+  .project-card h3{
+    font-size: 26px;
+  }
+}
